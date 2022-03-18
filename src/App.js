@@ -1,35 +1,33 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './App.css';
-import userInput from './userInput/userInput';
-import userOutput from './userOutput/userOutput';
+import UserInput from './userInput/userInput';
+import UserOutput from './userOutput/userOutput';
 
-class App extends Component {
+const App = () => {
 
-  state = {
-    username: 'superchar'
-  }
+  const [user, setUser]=useState ('superchar')
 
-  usernameChangeHandler = (event) => {
-   this.setState({
-    username: event.target.value
-   })
+  const usernameChangeHandler = (event) => {
+   setUser(event.target.value)
   }
   
 
-  render() {
     return (
       <div>
-
-      <userInput 
-      changed={this.usernameChangeHandler}
-      currentName={this.state.username}/>
-      <userOutput userName={this.state.username}/>
-      <userOutput userName={this.state.username} />
-      <userOutput userName="charbel"/>
+       <h1>Hello </h1>
+<input type="text"/>
+        <UserInput
+       changed={usernameChangeHandler}
+       currentName={user}/>
+       <UserOutput userName={user}/>
+       <UserOutput userName={user} />
+       <UserOutput userName="charbel"/>
+       
+       
 
       </div>
     );
   }
-}
+
 
 export default App;

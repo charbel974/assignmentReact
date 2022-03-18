@@ -1,6 +1,6 @@
 import React from 'react';
 
-const userInput = (props) =>{
+const UserInput = (props) =>{
     const style = {
         border:'2px solid red'
     };
@@ -10,4 +10,4 @@ const userInput = (props) =>{
     onChange={props.changed} 
     value={props.currentName} />
 };
-export default userInput;
+export default UserInput;

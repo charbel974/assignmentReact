@@ -1,6 +1,6 @@
 import React from 'react'
 import './userOutput.css'
-const userOutput = (props) =>{
+const UserOutput = (props) =>{
     return (
         <div className="userOutput">
             <p>Username:{props.userName} </p>
@@ -9,4 +9,4 @@ const userOutput = (props) =>{
     )
 
 };
-export default userOutput;
+export default UserOutput;
